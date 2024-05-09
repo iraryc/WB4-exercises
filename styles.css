@@ -1,0 +1,59 @@
+body {
+    background-color: #87CEEB; /* Sky blue background */
+    background-image: url(/images/r\ \(1\).jpg);
+    margin: 0; /* Remove default body margin */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Ensure full viewport height */
+  }
+  
+  .cloud {
+    position: relative;
+    width: 300px;
+    height: 150px;
+  }
+  
+  .cloud:hover .cloud-circle, .cloud-text:hover  {
+    background-color: #ccc; /* New color when hovering */
+    color: blue;
+  }
+  
+  .cloud-circle {
+    position: absolute;
+    background-color: #fff; /* White cloud color */
+    border-radius: 50%;
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+  }
+  
+  .cloud-circle:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+  }
+  
+  .cloud-circle:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: -200px;
+    left: 50px;
+  }
+  
+  .cloud-circle:nth-child(3) {
+    width: 90px;
+    height: 90px;
+    top: 10px;
+    left: 140px;
+  }
+  
+ .cloud-text {
+    position: absolute;
+    top: 32%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #333; /* Text color */
+    font-family: Arial, sans-serif; /* Specify desired font family */
+  }
+

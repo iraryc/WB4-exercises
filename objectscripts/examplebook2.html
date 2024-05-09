@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <script>
+        // Define Book objects
+        // we are creating an array of many books (in this case two books)
+        let books = [
+            {
+                title: "The Great Gatsby",
+                author: "F. Scott Fitzgerald",
+                pages: 218,
+                price: 19.99
+            },
+            {
+                title: "A new book",
+                author: "Thom Hanks",
+                pages: 218,
+                price: 30.99
+            }
+        ];
+        // Function to generate book details
+        function displayBookDetails(book) {
+            let bookDetails = "Title: " + book.title + ", Author: " + book.author + ", Pages: " + book.pages + ", Price " + book.price;
+            document.getElementById("bookDetails").innerHTML = bookDetails; // the bookDetails is from the div in the html below
+
+            
+        }
+        function displayBookDetails2(book) {
+            let bookDetails2 = "Title: " + book.title + ", Author: " + book.author + ", Pages: " + book.pages + ", Price " + book.price;
+            document.getElementById("bookDetails2").innerHTML = bookDetails2; 
+        }
+
+        function calculateTotalPrice(book) {
+            let calculatePrice = book[0].price + book[1].price;
+            let calculateTheTotalPrice = `The total price of the books is ${calculatePrice}`;
+            document.getElementById("calculateTheTotalPrice").innerHTML = calculateTheTotalPrice; 
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <div id="bookDetails"></div> <!--Id needed to show in website and to add to function above^-->
+    <div id="bookDetails2"></div>
+    <div id="calculateTheTotalPrice"></div>
+
+    <button onclick="displayBookDetails(books[0])">Show first book</button>
+    <button onclick="displayBookDetails2(books[1])">Show second book</button>  <!--since this is in an array we need to add the number of which book we want to display
+    but since its zero bases book two is really book 1 (0,1,2,3 etc...)-->
+    <button onclick="calculateTotalPrice(books)">Calculate Total Price</button>
+</body>
+</html>

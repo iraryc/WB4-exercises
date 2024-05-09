@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <script>
+        // Define Book objects
+        // we are creating an array of many books (in this case two books)
+        let restaurant = [{
+            name: "In N Out",
+            cuisine: "Burger",
+            rating: 4.9,
+        }, 
+        {
+            name: "Olive Garden",
+            cuisine: "Italian",
+            rating: 1,
+
+        }
+];
+        // Function to generate book details
+        function displayRestaurantDetails(food) {
+            let restaurantDetails = "Best Restaurant: " + food.name + ", Cuisine: " + food.cuisine + ", Rating: " + food.rating;
+            document.getElementById("restaurantDetails").innerHTML = restaurantDetails; // the bookDetails is from the div in the html below
+
+            
+        }
+        function restaurantDetails2(food) {
+            let restaurantDetails2 = "Worst Restaurant: " + food.name + ", Cuisine: " + food.cuisine + ", Rating: " + food.rating;
+            document.getElementById("restaurantDetails2").innerHTML = restaurantDetails2; 
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>Best and Worst Restaurant</h1>
+    <div id="restaurantDetails"></div> <!--Id needed to show in website and to add to function above^-->
+    <div id="restaurantDetails2"></div>
+
+    <button onclick="displayRestaurantDetails(restaurant[0])">Show best restaurant</button>
+    <button onclick="restaurantDetails2(restaurant[1])">Show worst restaurant</button>  <!--since this is in an array we need to add the number of which book we want to display
+    but since its zero bases book two is really book 1 (0,1,2,3 etc...)-->
+</body>
+</html>

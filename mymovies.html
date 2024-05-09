@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Movie Picker</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS can be added here */
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Random Movie Picker</h1>
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center mb-4">
+        <button class="btn btn-primary" onclick="randomMovie()">Pick Random Movie</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <h2 class="mb-3" id="movieTitle"></h2>
+        <img src="" alt="Movie Poster" id="moviePoster" style="max-width: 100%; height: auto;">
+        <p class="mt-3" id="movieReason"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    let myFavoriteMoviesList = [
+      {
+          title: "Shrek",
+          reason: "So funny",
+          picture: "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
+      },
+      {
+          title: "The Interview",
+          reason: "Good memories watching it with my little brother",
+          picture: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Interview_2014_poster.jpg"
+      },
+      {
+          title: "The Princess Diaries",
+          reason: "Good memories watching it with my little sister and love Anne Hathaway <3",
+          picture: "https://lumiere-a.akamaihd.net/v1/images/p_theprincessdiaries_19875_2ef7e437.jpeg"
+      },
+      {
+          title: "The Proposal",
+          reason: "Love Sandra Bullock <3 and Ryan Reynolds <3!",
+          picture: "https://m.media-amazon.com/images/M/MV5BOGM5YTNiYzktNmEwZC00ZjE5LWIyNzEtOTUwNDE0NmVkYzE3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+      }
+    ];
+
+    function randomMovie() {
+      let pickRandom = Math.floor(Math.random() * myFavoriteMoviesList.length);
+      let favoriteMovie = myFavoriteMoviesList[pickRandom];
+      // Display movie information
+      document.getElementById("movieTitle").textContent = favoriteMovie.title;
+      document.getElementById("moviePoster").src = favoriteMovie.picture;
+      document.getElementById("movieReason").textContent = favoriteMovie.reason;
+    }
+  </script>
+</body>
+</html>

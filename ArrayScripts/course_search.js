@@ -106,71 +106,161 @@
 //    }
    
    //actos.js
-   let academyMembers = [
-    {
-    memID: 101,
-    name: "Bob Brown",
-    films: ["Bob I", "Bob II", "Bob III", "Bob IV"]
-    },
-    {
-    memID: 142,
-    name: "Sallie Smith",
-    films: ["A Good Day", "A Better Day"]
-    },
-    {
-    memID: 187,
-    name: "Fred Flanders",
-    films: ["Who is Fred?", "Where is Fred?",
-    "What is Fred?", "Why Fred?"]
-    },
-    {
-    memID: 203,
-    name: "Bobbie Boots",
-    films: ["Walking Boots", "Hiking Boots",
-    "Cowboy Boots"]
-    },
-   ];
+//    let academyMembers = [
+//     {
+//     memID: 101,
+//     name: "Bob Brown",
+//     films: ["Bob I", "Bob II", "Bob III", "Bob IV"]
+//     },
+//     {
+//     memID: 142,
+//     name: "Sallie Smith",
+//     films: ["A Good Day", "A Better Day"]
+//     },
+//     {
+//     memID: 187,
+//     name: "Fred Flanders",
+//     films: ["Who is Fred?", "Where is Fred?",
+//     "What is Fred?", "Why Fred?"]
+//     },
+//     {
+//     memID: 203,
+//     name: "Bobbie Boots",
+//     films: ["Walking Boots", "Hiking Boots",
+//     "Cowboy Boots"]
+//     },
+//    ];
 
-   for(let i = 0; i< academyMembers.length; i++){
-    if(academyMembers[i].memID === 187){
-        console.log(academyMembers[i].name);
+//    for(let i = 0; i< academyMembers.length; i++){
+//     if(academyMembers[i].memID === 187){
+//         console.log(academyMembers[i].name);
+//     }
+//    }
+
+//    let peopleWithThreeFilms = [];
+//    for (let i = 0; i < academyMembers.length; i++) {
+//      if (academyMembers[i].films.length >= 3) {
+//        peopleWithThreeFilms.push(academyMembers[i].name);
+//      }
+//    }
+//    console.log("People with at least three films:", peopleWithThreeFilms.join(", "));
+
+//    let bobnames=[];
+//    for(let i=0; i<academyMembers.length; i++){
+//     if(academyMembers[i].name.startsWith("Bob")){
+//         bobnames.push(academyMembers[i].name);
+//     }
+//    }
+
+//    if(bobnames.length > 0){
+//     console.log(bobnames.join(", "));
+//    } else {
+//     console.log("none");
+//    }
+
+//    let academyMemberA = []
+//    for(let i=0; i <academyMembers.length; i++){
+//     let films = academyMembers[i].films;
+//     for(let j = 0; j <films.length; j++){
+//         if(films[j][0] ==="A"){
+//              academyMemberA.push(academyMembers[i].name);
+//              break;   
+//         }
+//     }
+//    }
+
+//    if(academyMemberA.length > 0){
+//     console.log(academyMemberA.join(", "));
+//    } else {
+//     console.log("None");
+//    }
+
+
+// let favoriteMovies = [
+//     "Memoirs of a Geisha",
+//     "Training Day",
+//     "Princess and the Frog",
+//     "Spiderman",
+//     "Deadpool",
+//     "Avengers",
+//     "Forrest Gump",
+//     "The Help",
+//     "Barefoot",
+//     "The Conjuring",
+//     "Cars",
+//     "Grease",
+//     "Wreck-It Ralph",
+//     "Back to the Future",
+//     "Spirited Away",
+//     "The Shawshank Redemption",
+//     "The Green Mile",
+//     "Forrest Gump", // This duplicate will be removed
+//     "Rollerball",
+//     "Planet of the Apes",
+//     "2001: A Space Odyssey",
+//     "How To Train Your Dragon",
+//     "Howl's Moving Castle",
+//     "Ponyo",
+//     "Catch Me If You Can",
+//     "The Little Rascals",
+//     "Scream",
+//     "Shrek 2",
+//     "Megamind",
+//     "Shrek",
+//     "The Interview",
+//     "The Proposal",
+//     "The Pursuit of Happyness",
+//     "The Longest Yard",
+//     "17 Again",
+//     "Rush Hour",
+//     "Athena",
+//     "The Pianist",
+//     "I feel Joker",
+//     "The Godfather",
+//     "The Mask",
+//     "Pan's Labyrinth",
+//     "Transformers",
+//     "Shrek 4"
+// ];
+
+// //    function displayMovie(_movies){
+// //        console.log(`My favorite 4 movies are ${_movies[3]},${_movies[2]}, ${_movies[1]} and ${_movies[0]} `)
+// //     };
+
+// //     displayMovie(favoritemovies);
+
+// for(let i=0; i<favoriteMovies.length; i++){
+//     console.log(`You should watch ${favoriteMovies[i]}`);
+// }
+
+let myFavoriteMoviesList = [
+    {
+        title: "Shrek",
+        reason: "So funny",
+        picture: "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
+
+    },
+    {
+        title: "The Interview",
+        reason: "Good memories watching it with my little brother",
+        picture: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Interview_2014_poster.jpg"
+
+    },
+    {
+        title: "The Princess Diaries",
+        reason: "Good memories watching it with my little sister and love Anne Hathaway <3",
+        picture: "https://lumiere-a.akamaihd.net/v1/images/p_theprincessdiaries_19875_2ef7e437.jpeg"
+    },
+    {
+        title: "The Proposal",
+        reason: "Love Sandra Bullock <3 and Ryan Reynolds <3!",
+        picture: "https://m.media-amazon.com/images/M/MV5BOGM5YTNiYzktNmEwZC00ZjE5LWIyNzEtOTUwNDE0NmVkYzE3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
     }
-   }
-
-   let peopleWithThreeFilms = [];
-   for (let i = 0; i < academyMembers.length; i++) {
-     if (academyMembers[i].films.length >= 3) {
-       peopleWithThreeFilms.push(academyMembers[i].name);
-     }
-   }
-   console.log("People with at least three films:", peopleWithThreeFilms.join(", "));
-
-   let bobnames=[];
-   for(let i=0; i<academyMembers.length; i++){
-    if(academyMembers[i].name.startsWith("Bob")){
-        bobnames.push(academyMembers[i].name);
+]
+function randomMovie(){
+        let pickRandom = Math.floor(Math.random()*myFavoriteMoviesList.length)
+        let favoriteMovie = myFavoriteMoviesList[pickRandom]
+        console.log(favoriteMovie);
     }
-   }
 
-   if(bobnames.length > 0){
-    console.log(bobnames.join(", "));
-   } else {
-    console.log("none");
-   }
-
-   let academyMemberA = []
-   for(let i=0; i <academyMembers.length; i++){
-    let films = academyMembers[i].films;
-    for(let j = 0; j <films.length; j++){
-        if(films[j][0] ==="A"){
-             academyMemberA.push(academyMembers[i].name);
-             break;   
-        }
-    }
-   }
-
-   if(academyMemberA.length > 0){
-    console.log(academyMemberA.join(", "));
-   } else {
-    console.log("None");
-   }
+    randomMovie(myFavoriteMoviesList);

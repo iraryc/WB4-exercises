@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Team Info</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1>Football Team Information</h1>
+    
+    <!-- Dropdown to select a football team -->
+    <div class="form-group">
+      <label for="teamSelect">Select a team:</label>
+      <select class="form-control" id="teamSelect">
+        <option value="team1">Team 1</option>
+        <option value="team2">Team 2</option>
+        <option value="team3">Team 3</option>
+        <!-- Add more teams as needed -->
+      </select>
+    </div>
+    
+    <!-- Button to display team info -->
+    <button class="btn btn-primary" onclick="showTeamInfo()">Show Team Info</button>
+    
+    <!-- Paragraph to display team info -->
+    <p class="mt-3" id="teamInfo"></p>
+  </div>
+
+  <!-- Bootstrap JS (optional if you need to use Bootstrap's JavaScript components) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="football.js"></script>
+
+</body>
+</html>

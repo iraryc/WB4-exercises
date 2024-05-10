@@ -98,7 +98,49 @@ function compareAscendingNumber(a, b) {
            
     ]
 
-    courses.sort();
-    for(i=0; i < courses.length; i++){
+    courses.sort((a, b) => a.Title.localeCompare(b.Title));
+    for(let i=0; i < courses.length; i++){
         console.log(courses[i].Title);
     }
+
+    //products_sortings.js
+    let products = [
+            {product: "Gummy Worms", price: 5.79},
+            {product: "Plain M&Ms", price: 2.89},
+            {product: "Peanut M&Ms", price: 2.89},
+            {product: "Swedish Fish", price: 3.79},
+            {product: "Hersheys Bar", price: 1.79},
+            {product: "Hot Cheetos", price: 4.79},
+            {product: "Pringles", price: 2.79},
+            {product: "Kit Kat", price: 3.79},
+            {product: "Twix", price: 4.79},
+            {product: "Oreos", price: 5.79}
+            // TODO: fill the array with 10 candies of various
+            // price ranges
+           ];
+
+    products.sort((a, b) => a.product.localeCompare(b.product));
+    for(let i = 0; i < products.length; i++){
+        console.log(products[i].product);
+    }
+
+    products.sort(function(a, b){
+        if (a.price > b.price) return -1;
+        else if (a.price == b.price) return 0;
+        else return 1;
+       });
+       let numProducts = products.length;
+       for(let i = 0; i < numProducts; i++) {
+        console.log(products[i].product + 
+        " $" + products[i].price.toFixed(2));}
+
+        //average and median 
+        
+    let students = [
+        {name: "Zephaniah", scores: [100, 96, 99, 92]},
+        {name: "Pursalane", scores: [92, 89, 96, 100, 94]},
+        {name: "Siddalee", scores: [86, 72, 92]},
+        {name: "Ian", scores: [98, 84, 89, 100, 100, 76]},
+        {name: "Elisha", scores: [89, 100]},
+        {name: "Ezra", scores: [100, 99, 100, 87]}
+   ];

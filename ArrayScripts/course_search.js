@@ -105,7 +105,7 @@
 //         }
 //    }
    
-   //actos.js
+//    actos.js
 //    let academyMembers = [
 //     {
 //     memID: 101,
@@ -176,7 +176,110 @@
 //    }
 
 
-// let favoriteMovies = [
+
+let vehicles = [
+    {
+    color: "Silver",
+    type: "Minivan",
+    registrationState: "CA",
+    licenseNo: "ABC-101",
+    registrationExpires: new Date("3-10-2022"),
+    capacity: 7
+    },
+    {
+    color: "Red",
+    type: "Pickup Truck",
+    registrationState: "TX",
+    licenseNo: "A1D-2NC",
+    registrationExpires: new Date("8-31-2023"),
+    capacity: 3
+    },
+    {
+    color: "White",
+    type: "Pickup Truck",
+    registrationState: "TX",
+    licenseNo: "A22-X00",
+    registrationExpires: new Date("9-31-2023"),
+    capacity: 6
+    },
+    {
+    color: "Red",
+    type: "Car",
+    registrationState: "CA",
+    licenseNo: "ABC-222",
+    registrationExpires: new Date("12-10-2022"),
+    capacity: 5
+    },
+    {
+    color: "Black",
+    type: "SUV",
+    registrationState: "CA",
+    licenseNo: "EEE-222",
+    registrationExpires: new Date("12-10-2021"),
+    capacity: 7
+    },
+    {
+    color: "Red",
+    type: "SUV",
+    registrationState: "TX",
+    licenseNo: "ZZ2-101",
+    registrationExpires: new Date("12-30-2022"),
+    capacity: 5
+    },
+    {
+    color: "White",
+    type: "Pickup Truck",
+    registrationState: "TX",
+    licenseNo: "CAC-7YT",
+    registrationExpires: new Date("1-31-2023"),
+    capacity: 5
+    },
+    {
+    color: "White",
+    type: "Pickup Truck",
+    registrationState: "CA",
+    licenseNo: "123-ABC",
+    registrationExpires: new Date("3-31-2023"),
+    capacity: 5
+    }
+   ];
+   
+
+   for(let i = 0; i < vehicles.length; i++) {
+    if(vehicles[i].color === "Red"){
+        console.log(vehicles[i].type);
+    }
+   }
+
+   for(let i =0; i < vehicles.length; i++){
+    if(vehicles[i].capacity >= 6){
+        console.log(vehicles[i].type);
+    }
+   }
+
+   for(let i = 0; i< vehicles.length; i++){
+    if(vehicles[i].licenseNo.includes ("222")){
+        console.log(vehicles[i].type);
+    }
+   }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // let favoriteMovies = [
 //     "Memoirs of a Geisha",
 //     "Training Day",
 //     "Princess and the Frog",
@@ -233,34 +336,125 @@
 //     console.log(`You should watch ${favoriteMovies[i]}`);
 // }
 
-let myFavoriteMoviesList = [
-    {
-        title: "Shrek",
-        reason: "So funny",
-        picture: "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
+// let myFavoriteMoviesList = [
+//     {
+//         title: "Shrek",
+//         reason: "So funny",
+//         picture: "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
 
-    },
-    {
-        title: "The Interview",
-        reason: "Good memories watching it with my little brother",
-        picture: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Interview_2014_poster.jpg"
+//     },
+//     {
+//         title: "The Interview",
+//         reason: "Good memories watching it with my little brother",
+//         picture: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Interview_2014_poster.jpg"
 
-    },
-    {
-        title: "The Princess Diaries",
-        reason: "Good memories watching it with my little sister and love Anne Hathaway <3",
-        picture: "https://lumiere-a.akamaihd.net/v1/images/p_theprincessdiaries_19875_2ef7e437.jpeg"
-    },
-    {
-        title: "The Proposal",
-        reason: "Love Sandra Bullock <3 and Ryan Reynolds <3!",
-        picture: "https://m.media-amazon.com/images/M/MV5BOGM5YTNiYzktNmEwZC00ZjE5LWIyNzEtOTUwNDE0NmVkYzE3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
-    }
-]
-function randomMovie(){
-        let pickRandom = Math.floor(Math.random()*myFavoriteMoviesList.length)
-        let favoriteMovie = myFavoriteMoviesList[pickRandom]
-        console.log(favoriteMovie);
-    }
+//     },
+//     {
+//         title: "The Princess Diaries",
+//         reason: "Good memories watching it with my little sister and love Anne Hathaway <3",
+//         picture: "https://lumiere-a.akamaihd.net/v1/images/p_theprincessdiaries_19875_2ef7e437.jpeg"
+//     },
+//     {
+//         title: "The Proposal",
+//         reason: "Love Sandra Bullock <3 and Ryan Reynolds <3!",
+//         picture: "https://m.media-amazon.com/images/M/MV5BOGM5YTNiYzktNmEwZC00ZjE5LWIyNzEtOTUwNDE0NmVkYzE3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+//     }
+// ]
+// function randomMovie(){
+//         let pickRandom = Math.floor(Math.random()*myFavoriteMoviesList.length)
+//         let favoriteMovie = myFavoriteMoviesList[pickRandom]
+//         console.log(favoriteMovie);
+//     }
 
-    randomMovie(myFavoriteMoviesList);
+//     randomMovie(myFavoriteMoviesList);
+
+//veichles.js// let favoriteMovies = [
+//     "Memoirs of a Geisha",
+//     "Training Day",
+//     "Princess and the Frog",
+//     "Spiderman",
+//     "Deadpool",
+//     "Avengers",
+//     "Forrest Gump",
+//     "The Help",
+//     "Barefoot",
+//     "The Conjuring",
+//     "Cars",
+//     "Grease",
+//     "Wreck-It Ralph",
+//     "Back to the Future",
+//     "Spirited Away",
+//     "The Shawshank Redemption",
+//     "The Green Mile",
+//     "Forrest Gump", // This duplicate will be removed
+//     "Rollerball",
+//     "Planet of the Apes",
+//     "2001: A Space Odyssey",
+//     "How To Train Your Dragon",
+//     "Howl's Moving Castle",
+//     "Ponyo",
+//     "Catch Me If You Can",
+//     "The Little Rascals",
+//     "Scream",
+//     "Shrek 2",
+//     "Megamind",
+//     "Shrek",
+//     "The Interview",
+//     "The Proposal",
+//     "The Pursuit of Happyness",
+//     "The Longest Yard",
+//     "17 Again",
+//     "Rush Hour",
+//     "Athena",
+//     "The Pianist",
+//     "I feel Joker",
+//     "The Godfather",
+//     "The Mask",
+//     "Pan's Labyrinth",
+//     "Transformers",
+//     "Shrek 4"
+// ];
+
+// //    function displayMovie(_movies){
+// //        console.log(`My favorite 4 movies are ${_movies[3]},${_movies[2]}, ${_movies[1]} and ${_movies[0]} `)
+// //     };
+
+// //     displayMovie(favoritemovies);
+
+// for(let i=0; i<favoriteMovies.length; i++){
+//     console.log(`You should watch ${favoriteMovies[i]}`);
+// }
+
+// let myFavoriteMoviesList = [
+//     {
+//         title: "Shrek",
+//         reason: "So funny",
+//         picture: "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
+
+//     },
+//     {
+//         title: "The Interview",
+//         reason: "Good memories watching it with my little brother",
+//         picture: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Interview_2014_poster.jpg"
+
+//     },
+//     {
+//         title: "The Princess Diaries",
+//         reason: "Good memories watching it with my little sister and love Anne Hathaway <3",
+//         picture: "https://lumiere-a.akamaihd.net/v1/images/p_theprincessdiaries_19875_2ef7e437.jpeg"
+//     },
+//     {
+//         title: "The Proposal",
+//         reason: "Love Sandra Bullock <3 and Ryan Reynolds <3!",
+//         picture: "https://m.media-amazon.com/images/M/MV5BOGM5YTNiYzktNmEwZC00ZjE5LWIyNzEtOTUwNDE0NmVkYzE3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+//     }
+// ]
+// function randomMovie(){
+//         let pickRandom = Math.floor(Math.random()*myFavoriteMoviesList.length)
+//         let favoriteMovie = myFavoriteMoviesList[pickRandom]
+//         console.log(favoriteMovie);
+//     }
+
+//     randomMovie(myFavoriteMoviesList);
+
+//veichles.js
